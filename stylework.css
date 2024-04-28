@@ -1,0 +1,77 @@
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(216, 216, 218);
+}
+
+header {
+    background-color: rgb(20, 53, 240);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header i {
+    font-size: 3rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+img {
+    margin-top: 20px;
+}
+
+.keySelectorBody h2 {
+    display: flex;
+
+}
+
+.keySelector {
+     display: flex;
+}
+
+.scaleChoices {
+    display: flex;
+    justify-content: space-evenly;
+ 
+}
+
+.chordName {
+    display: flex;
+}
+
+.submitButton {
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+}
+
+.submitButton button {
+    max-width: 100px;
+
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(177, 176, 180);
+    min-height: 40px;
+    align-items: center;
+}
