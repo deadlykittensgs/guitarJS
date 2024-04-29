@@ -14,13 +14,28 @@
     </header>
 
     <section>
-
+<div class="IMG">
     <img src="public/th.jpeg" alt="fretboard">
+</div>
+  
+
     <div class="keySelectorBody" >
     <h2> <i class="fa-solid fa-key"></i> Key selector</h2> 
     <div class="keySelector" >
     <p>Desired Key OR Chord</p>
+    </div>
+    <div class="input">
     <input id="chosenKey" type="text">
+    <button onclick="refreshPage()">clear</button>
+    </div>
+    <div id="answer">
+        <div><p id="i">R</p> <div id="root"></div></div>
+        <div><p id="ii">i</p> <div id="third"></div></div>
+        <div><p id="iii">ii</p> <div id="fifth"></div></div>
+        <div><p id="iv">iii</p> <div id="seventh"></div></div>
+        <div><p id="v">iv</p> <div id="ninth"></div></div>
+        <div><p id="vi">vi</p> <div id="ten"></div></div>
+        <div><p id="vii">vii</p> <div id="eleven"></div></div>
     </div>
     </div>
     
@@ -29,25 +44,19 @@
 <div class="scaleSelectorBody">
     <h2> <i class="fa-solid fa-music"></i> Choose a Scale</h2>
     <div class="scaleChoices">
-        <button>Minor</button>
-        <button>Major</button>
-        <button>Mixalidion</button>
-        <button>Pentatonic</button>
+        <button onclick="ShowNotesInMinorKey() " >Minor scale</button>
+        <button onclick="ShowNotesInMajorKey()" >Major scale</button>
+        <button onclick="ShowNotesInPentatonicMinor()">Minor Pentatonic Scale</button>
+        <button onclick="ShowNotesInPentatonic()">Pentatonic Scale</button>
+        <button onclick="ShowNotesInBlues()" >Blues Scale</button>
+        <button onclick="ShowNotesInBluesMinor()" >Minor Blues Scale</button>
     </div>
 
 </div>
 
-<!-- <div>
-<h2> <i class="fa-solid fa-thumbtack"></i> Notes in a Chord</h2>
-<div class="chordName" >
-<p> Chord Name:</p>
-<input type="text">
-</div>
-</div> -->
-
- <div class="submitButton" > 
-    <button onclick="">Submit Button</button>
- </div>
+ <!-- <div class="submitButton" > 
+    <button onclick="getKey()">Submit Button</button>
+ </div> -->
 </section>
 <footer>
 <P> <i class="fa-solid fa-gear"></i> Help</P>
