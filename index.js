@@ -19,14 +19,11 @@ let nameSix = document.getElementById("vi")
 let nameSeven = document.getElementById("vii")
 
 // onclick 
-
 let key =  ""
 let notes = []
 
 
 // functions 
-
-
 function getKey() {
     inputValue = chosenKey.value;
     let key = chosenKey.value.toUpperCase()
@@ -87,6 +84,7 @@ function ShowNotesInMajorKey() {
    nameFive.innerText = "5"
    nameSix.innerText = "6"
    nameSeven.innerText = "7"
+   return index[0,2,4,5,7,9,11]
 } 
 
 
@@ -109,6 +107,8 @@ function ShowNotesInMinorKey(index) {
     nameFive.innerText ="5"
     nameSix.innerText ="b6"
     nameSeven.innerText ="b7"
+
+    return index[0,2,3,5,7,8,10]
      
  } 
 
@@ -131,8 +131,7 @@ function ShowNotesInMinorKey(index) {
     nameFive.innerText ="6"
     nameSix.innerText = "-"
     nameSeven.innerText ="-"
-
-    
+    return index[0,2,4,7,9]
 
  }
 
@@ -155,6 +154,8 @@ function ShowNotesInMinorKey(index) {
     nameFive.innerText ="b7"
     nameSix.innerText ="-"
     nameSeven.innerText ="-"
+
+    return index[0,3,5,7,10]
    
  }
 
@@ -179,6 +180,7 @@ function ShowNotesInMinorKey(index) {
     nameFive.innerText ="5"
     nameSix.innerText ="6"
     nameSeven.innerText ="-"
+    return index[0,3,5,6,7,10]
  }
 
 
@@ -196,14 +198,17 @@ function ShowNotesInMinorKey(index) {
    
      nameOne.innerText ="1"
      nameTwo.innerText ="b3"
-     three.innerText ="4"
+     nameThree.innerText ="4"
      nameFour.innerText ="b5"
      nameFive.innerText ="5"
      nameSix.innerText = "b7"
      nameSeven.innerText ="-"
+
+     return index[0,3,5,6,7,10]
  }
 
  function refreshPage() {
     location.reload()
 
  }
+
