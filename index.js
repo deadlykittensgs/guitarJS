@@ -2,6 +2,7 @@
 const musicNotes = ["A", "A#", "B","C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
 
 // get from doc
+let answerHide = document.getElementById("answer")
 let chosenKey = document.getElementById("chosenKey")
 let one = document.getElementById("root")
 let two = document.getElementById("third")
@@ -68,6 +69,7 @@ return  orderedArray
 function ShowNotesInMajorKey() {
 
     index = getKey()
+    showHide()
     
    one.innerText = index[0]
    two.innerText = index[2]
@@ -91,6 +93,7 @@ function ShowNotesInMajorKey() {
 function ShowNotesInMinorKey(index) {
 
     index = getKey()
+    showHide()
 
     one.innerText = index[0]
     two.innerText = index[2]
@@ -115,6 +118,7 @@ function ShowNotesInMinorKey(index) {
  function ShowNotesInPentatonic() {
 
     index = getKey()
+    showHide()
 
     one.innerText = index[0]
     two.innerText = index[2]
@@ -138,6 +142,7 @@ function ShowNotesInMinorKey(index) {
  function ShowNotesInPentatonicMinor() {
 
     index = getKey()
+    showHide()
 
     one.innerText = index[0]
     two.innerText = index[3]
@@ -163,6 +168,7 @@ function ShowNotesInMinorKey(index) {
  function ShowNotesInBlues() {
 
     index = getKey()
+    showHide()
 
     one.innerText = index[0]
     two.innerText = index[3]
@@ -187,6 +193,7 @@ function ShowNotesInMinorKey(index) {
  function ShowNotesInBluesMinor() {
 
     index = getKey()
+    showHide()
 
     one.innerText = index[0]
     two.innerText = index[3]
@@ -212,3 +219,6 @@ function ShowNotesInMinorKey(index) {
 
  }
 
+function showHide() {
+   answerHide.className = "none"
+}

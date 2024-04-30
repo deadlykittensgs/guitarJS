@@ -89,6 +89,11 @@ height: 25%;
     justify-content: space-evenly;
  
 }
+.hide {
+    opacity: 0;
+
+}
+
 
 #answer {
     flex: 1;
