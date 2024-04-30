@@ -7,3 +7,5 @@ goal make a picture of the fret board that you can click the notes to highlight 
 next make a function that takes the highlighted notes and checks them with a database to see what chord would be made out of that variation of notes. if none return chord not found 
 
 secondary objective make a page that shows all the notes in scales in a key 
+
+wifi test
