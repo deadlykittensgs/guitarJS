@@ -26,6 +26,7 @@ let notes = []
 
 // functions 
 function getKey() {
+   // maybe put an if clause here for the minor catch
     inputValue = chosenKey.value;
     let key = chosenKey.value.toUpperCase()
     console.log(key)
