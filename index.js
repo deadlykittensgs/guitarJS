@@ -1,7 +1,9 @@
 // define
 const musicNotes = ["A", "A#", "B","C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
 
-// get from doc
+// get from doc 
+
+let neckDynamic = document.getElementById("neckDynamic")
 let answerHide = document.getElementById("answer")
 let chosenKey = document.getElementById("chosenKey")
 let one = document.getElementById("root")
@@ -23,6 +25,14 @@ let nameSeven = document.getElementById("vii")
 let key =  ""
 let notes = []
 
+// make dynamic neck? 
+
+neckDynamic.createElemeny("div")
+
+//create a div thats a fret with a note in it and do it x times on a loop 
+
+
+
 
 // functions 
 function getKey() {
@@ -38,14 +48,12 @@ function getKey() {
     return correctedNoteOrder
 }
 
-
 // if (key.includes("m")){
 //     ShowNotesInMinorKey(correctedNoteOrder)
 //    }
 //    else {
 //     ShowNotesInMajorKey(correctedNoteOrder)
 //    }
-
 
 // find the index of the key given
 function findIndexOfChord(inputValue) {
