@@ -21,13 +21,19 @@ let nameFive = document.getElementById("v")
 let nameSix = document.getElementById("vi")
 let nameSeven = document.getElementById("vii")
 
+let ProgressionsP1 = document.getElementById("ProgressionsP1")
+let ProgressionsP2 = document.getElementById("ProgressionsP2")
+let ProgressionsP3= document.getElementById("ProgressionsP3")
+let ProgressionsP4 = document.getElementById("ProgressionsP4")
+
+
 // onclick 
 let key =  ""
 let notes = []
 
 // make dynamic neck? 
 
-neckDynamic.createElemeny("div")
+//neckDynamic.createElemeny("div")
 
 //create a div thats a fret with a note in it and do it x times on a loop 
 
@@ -45,6 +51,7 @@ function getKey() {
    let correctedNoteOrder = getScale(number)
 // reset everything 
     // chosenKey.value = ""
+   
     return correctedNoteOrder
 }
 
@@ -95,6 +102,7 @@ function ShowNotesInMajorKey() {
    nameFive.innerText = "5"
    nameSix.innerText = "6"
    nameSeven.innerText = "7"
+   chordProgressionsInKey(index)
    return index[0,2,4,5,7,9,11]
 } 
 
@@ -120,7 +128,7 @@ function ShowNotesInMinorKey(index) {
     nameSix.innerText ="b6"
     nameSeven.innerText ="b7"
 
-    return index[0,2,3,5,7,8,10]
+    return index
      
  } 
 
@@ -144,7 +152,9 @@ function ShowNotesInMinorKey(index) {
     nameFive.innerText ="6"
     nameSix.innerText = "-"
     nameSeven.innerText ="-"
-    return index[0,2,4,7,9]
+
+    chordProgressionsInKey(index)
+    return index
 
  }
 
@@ -169,7 +179,7 @@ function ShowNotesInMinorKey(index) {
     nameSix.innerText ="-"
     nameSeven.innerText ="-"
 
-    return index[0,3,5,7,10]
+    return
    
  }
 
@@ -195,7 +205,8 @@ function ShowNotesInMinorKey(index) {
     nameFive.innerText ="5"
     nameSix.innerText ="6"
     nameSeven.innerText ="-"
-    return index[0,3,5,6,7,10]
+    chordProgressionsInKey(index)
+    return index
  }
 
 
@@ -220,7 +231,7 @@ function ShowNotesInMinorKey(index) {
      nameSix.innerText = "b7"
      nameSeven.innerText ="-"
 
-     return index[0,3,5,6,7,10]
+     return index
  }
 
  function refreshPage() {
@@ -231,3 +242,79 @@ function ShowNotesInMinorKey(index) {
 function showHide() {
    answerHide.className = "none"
 }
+
+function chordProgressionsInKey(notesForChords) {
+   let orderedArrayOfNotes = notesForChords
+   let value0 = orderedArrayOfNotes[0]
+   let value1 = orderedArrayOfNotes[1]
+   let value2 = orderedArrayOfNotes[2]
+   let value3 = orderedArrayOfNotes[3]
+   let value4 = orderedArrayOfNotes[4]
+   let value5 = orderedArrayOfNotes[5]
+   let value6 = orderedArrayOfNotes[6]
+   let value7 = orderedArrayOfNotes[7]
+   let value8 = orderedArrayOfNotes[8]
+   let value9 = orderedArrayOfNotes[9]
+   let value10 = orderedArrayOfNotes[10]
+   let value11 = orderedArrayOfNotes[11]
+   ProgressionsP1.innerText = `${value0}-${value5}-${value7}-${value0}`
+   ProgressionsP2.innerText =  `${value0}-${value9}-${value5}-${value7}`
+   ProgressionsP3.innerText = `${value2}-${value7}-${value0}`
+   ProgressionsP4.innerText = `${value0}-${value9}-${value2}-${value7}`
+}
+
+// function chordProgressionsInKeyMinor(notesForChords) {
+//    let orderedArrayOfNotes = notesForChords
+//    let value0 = orderedArrayOfNotes[0]
+//    let value1 = orderedArrayOfNotes[1]
+//    let value2 = orderedArrayOfNotes[2]
+//    let value3 = orderedArrayOfNotes[3]
+//    let value4 = orderedArrayOfNotes[4]
+//    let value5 = orderedArrayOfNotes[5]
+//    let value6 = orderedArrayOfNotes[6]
+//    let value7 = orderedArrayOfNotes[7]
+//    let value8 = orderedArrayOfNotes[8]
+//    let value9 = orderedArrayOfNotes[9]
+//    let value10 = orderedArrayOfNotes[10]
+//    let value11 = orderedArrayOfNotes[11]
+//    ProgressionsP1.innerText = `${value0}-${value5}-${value7}-${value0}`
+//    ProgressionsP2.innerText =  `${value0}-${value9}-${value5}-${value7}`
+//    ProgressionsP3.innerText = `${value2}-${value7}-${value0}`
+//    ProgressionsP4.innerText = `${value0}-${value9}-${value2}-${value7}`
+// }
+
+
+
+// Get the reference to the <div> element
+const myBox = document.getElementById('myBox');
+
+
+// Function to update the text inside the box
+function updateText() {
+   let randomIndex = Math.floor(Math.random() * 11) 
+    myBox.textContent =  musicNotes[randomIndex];
+  
+}
+
+
+
+// Update the text every second
+setInterval(updateText, 1000);
+
+function speedOfDisplay(number) {
+   speed =  speed  +  number
+   return  
+}
+
+function hideRandom() {
+   myBox.className = "hide"
+}
+function showRandom()  {
+   myBox.className = "none"
+   
+}
+
+
+
+
+

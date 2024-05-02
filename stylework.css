@@ -1,3 +1,7 @@
+:root {
+    --backgroundColor:  rgb(105, 122, 218);
+}
+
 * {
     padding: 0%;
     margin: 0;
@@ -91,14 +95,13 @@ height: 25%;
 }
 .hide {
     opacity: 0;
-
 }
 
 
 #answer {
     flex: 1;
     display: flex;
-    background-color: rgb(139, 143, 143);
+    background-color: var(--backgroundColor);
     min-height: 20px;
     min-width: 100%;
    justify-content: space-evenly;
@@ -106,16 +109,73 @@ height: 25%;
    max-height: 50px;
 }
 
-
-.submitButton {
-   display: flex;
-   justify-content: center;
-   padding: 20px;
+.chords h2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.submitButton button {
-    max-width: 100px;
+
+.ProgressionsMood {
+   padding: 20px;
+   line-height: 2.5rem;
+}
+
+.background {
+    background-color: var(--backgroundColor);
+}
+
+.chordShow {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.random {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+}
+
+
+
+.random h2 {  
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#myBox {
+    width: 50%;
+    display: flex;
+    font-size: 6rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--backgroundColor);
+}
+
+.hide {
+  color: rgb(255, 255, 255);
+}
+
+.randomButtons {
+    padding: 20px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.randomButtons button{
+    width: 70px;
 }
 
 footer {
@@ -127,3 +187,4 @@ footer {
     color: rgb(92, 72, 139);
     padding: 0 20px;
 }
+

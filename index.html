@@ -46,19 +46,42 @@
 <div class="scaleSelectorBody">
     <h2> <i class="fa-solid fa-music"></i> Choose a Scale</h2>
     <div class="scaleChoices">
-        <button onclick="ShowNotesInMinorKey() " >Minor scale</button>
+        <button onclick="ShowNotesInMinorKey()" >Minor scale</button>
         <button onclick="ShowNotesInMajorKey()" >Major scale</button>
         <button onclick="ShowNotesInPentatonicMinor()">Minor Pentatonic Scale</button>
         <button onclick="ShowNotesInPentatonic()">Pentatonic Scale</button>
         <button onclick="ShowNotesInBlues()" >Blues Scale</button>
         <button onclick="ShowNotesInBluesMinor()" >Minor Blues Scale</button>
     </div>
+</div>
+
+<div class="chords"> 
+    <h2> <i class="fa-regular fa-face-smile-beam"></i>Common Chord Progressions</h2>
+<div class="ProgressionsMood">
+    <p> R-4-5-R: This progression is a classic and often used in upbeat, happy songs</p>
+    <p class="background chordShow" id="ProgressionsP1"></p>
+    <p>R-6-4-5: This progression is also quite common and has a more relaxed, pleasant feel</p>
+    <p class="background chordShow" id="ProgressionsP2"></p>
+    <p>2-5-R:  This progression is known as a turnaround and often used in jazz music</p>
+    <p class="background chordShow" id="ProgressionsP3"></p>
+    <p>R-6-2-5: Common progression in jazz and pop music, it has a smooth and flowing feel</p>
+    <p class="background chordShow" id="ProgressionsP4"></p>
+</div>
+</div>
+
+
+<div class="random">  
+    <h2 ><i class="fa-solid fa-shuffle"></i>Random Chord Generator</h2>
+    <div id="myBox">A</div>
+<div class="randomButtons"> 
+    <button onclick="speedOfDisplay(-100)">Slower</button>
+    <button onclick="showRandom(), updateText()">Start </button>
+    <button onclick="hideRandom()">Stop</button>
+    <button onclick="speedOfDisplay(100)">Faster</button>
+</div>
 
 </div>
 
- <!-- <div class="submitButton" > 
-    <button onclick="getKey()">Submit Button</button>
- </div> -->
 </section>
 <footer>
 <P> <i class="fa-solid fa-gear"></i> Help</P>
