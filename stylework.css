@@ -205,8 +205,12 @@ footer {
 
 .neck {
     display: flex;
+    padding: 1px;
     background-color: rgb(159, 72, 72);
     overflow: auto;
+    flex:1 1 200px;
+    width: 100%;
+    
    
 }
 
@@ -221,13 +225,13 @@ footer {
     display: flex;
     flex: 1;
     flex-direction: column;
-    width: 40px;
+    align-items: center;
    
 }
     
 .fret { 
     min-width: 4px;
-    background-color: rgb(127, 127, 130);
+    background-color: rgb(149, 149, 154);
     height: 83%;
 
 }
@@ -236,11 +240,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border-radius: 50%;
     height: 25px;
     width: 25px;
-    text-align: center;
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
     margin: 3px;
    
 }
@@ -261,7 +265,7 @@ footer {
 }
 
 #octiveFret {
-    background-color: aqua;
+    background-color: rgb(52, 52, 52);
     width: 5px;
 }
 
@@ -269,6 +273,8 @@ footer {
     display: flex;
     background-color: rgb(183, 183, 187);
     padding: 30px;
+    position: sticky;
+    top:-110px
 
 }
 
@@ -276,13 +282,27 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
+    font-size: 2rem;
 }
 
-.gap {
-    background-color: rgb(183, 183, 187);
-    height: 10px;
- 
+.fretboardHolder button {
+    align-self: flex-end;
+    display: flex;
+    width: 30px;
+    height: 30PX;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 
+
+.open div {
+    background-color: rgb(131, 125, 118);
+   
+}
+
+.glow {
+    background-color: aqua;
+}

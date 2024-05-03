@@ -31,13 +31,6 @@ let ProgressionsP4 = document.getElementById("ProgressionsP4")
 let key =  ""
 let notes = []
 
-// make dynamic neck? 
-
-//neckDynamic.createElemeny("div")
-
-//create a div thats a fret with a note in it and do it x times on a loop 
-
-
 
 
 // functions 
@@ -86,7 +79,7 @@ function ShowNotesInMajorKey() {
 
     index = getKey()
     showHide()
-    
+    highlightNotes(index[0],index[2], index[4],index[5],index[7],index[9],index[11])
    one.innerText = index[0]
    two.innerText = index[2]
    three.innerText = index[4]
@@ -313,6 +306,83 @@ function showRandom()  {
    myBox.className = "none"
    
 }
+
+
+function highlightNotes(n1,n2,n3,n4,n5,n6,n7,) {
+
+   let removeHighlight = document.querySelectorAll(".glow")
+removeHighlight.forEach(removeHighlight => {
+   removeHighlight.classList.remove("glow")
+})
+
+  let new1 = n1.replaceAll("#","S")
+   let highlight = document.querySelectorAll(`.${new1}`)
+   highlight.forEach(highlight =>{
+   highlight.classList.add("glow"); 
+ })
+
+
+let new2 = n2.replaceAll("#","S")
+let highlightTwo = document.querySelectorAll(`.${new2}`)
+highlightTwo.forEach(highlightTwo =>{
+highlightTwo.classList.add("glow"); 
+})
+
+let new3 = n3.replaceAll("#","S")
+let highlightThree = document.querySelectorAll(`.${new3}`)
+highlightThree.forEach(highlightThree =>{
+highlightThree.classList.add("glow"); 
+})
+let new4 = n4.replaceAll("#","S")
+let highlightFour = document.querySelectorAll(`.${new4}`)
+highlightFour.forEach(highlightFour =>{
+highlightFour.classList.add("glow"); 
+})
+let new5 = n5.replaceAll("#","S")
+let highlightFive= document.querySelectorAll(`.${new5}`)
+highlightFive.forEach(highlightFive =>{
+highlightFive.classList.add("glow"); 
+})
+let new6 = n6.replaceAll("#","S")
+let highlightSix = document.querySelectorAll(`.${new6}`)
+highlightSix.forEach(highlightSix =>{
+highlightSix.classList.add("glow"); 
+})
+let new7 = n7.replaceAll("#","S")
+let highlightSeven = document.querySelectorAll(`.${new7}`)
+highlightSeven.forEach(highlightSeven =>{
+highlightSeven.classList.add("glow"); 
+})
+
+}
+//  let highlightTwo = document.querySelectorAll(`.${n2}`)
+//  let highlightThree = document.querySelectorAll(`.${n3}`)
+//  let highlightFour = document.querySelectorAll(`.${n4}`)
+//  let highlightFive = document.querySelectorAll(`.${n5}`,)
+//  let highlightSix = document.querySelectorAll(`.${n6}`)
+//  let highlightSeven = document.querySelectorAll(`.${n7}`)
+
+
+
+//  highlightTwo.forEach(highlight =>{
+//    highlight.classList.add("glow"); 
+//  })
+//  highlightThree.forEach(highlight =>{
+//    highlight.classList.add("glow"); 
+//  })
+//  highlightFour.forEach(highlight =>{
+//    highlight.classList.add("glow"); 
+//  })
+//  highlightFive.forEach(highlight =>{
+//    highlight.classList.add("glow"); 
+//  })
+//  highlightSix.forEach(highlight =>{
+//    highlight.classList.add("glow"); 
+//  })
+//  highlightSeven.forEach(highlight =>{
+//    highlight.classList.add("glow"); 
+//  })
+
 
 
 
