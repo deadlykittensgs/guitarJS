@@ -1,5 +1,5 @@
 :root {
-    --backgroundColor:  rgb(105, 122, 218);
+    --backgroundColor:  rgb(69, 93, 232);
 }
 
 * {
@@ -7,6 +7,16 @@
     margin: 0;
     box-sizing: border-box;
     /* border: 1px solid black; */
+}
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    
+}
+
+i {
+    padding-right: 5px;
 }
 
 body {
@@ -36,14 +46,6 @@ section {
     flex: 1;
 
 }
-.IMG {
-    display: flex;
-    justify-content: center;
-width: 90%;
-height: 25%;
-}
-
-
 
 .keySelectorBody {
     display: flex;
@@ -55,7 +57,6 @@ height: 25%;
     margin: 20px;
     display: flex;
     justify-content: center;
-
 }
 
 .keySelector {
@@ -89,9 +90,18 @@ height: 25%;
 }
 
 .scaleChoices {
+    gap: 20px;
     display: flex;
     justify-content: space-evenly;
+    background-color: var(--backgroundColor);
+    padding: 20px;
  
+}
+
+.scaleChoices button {
+    background-color: rgb(212, 219, 247);
+    border-radius: 5px;
+
 }
 .hide {
     opacity: 0;
@@ -163,7 +173,7 @@ height: 25%;
 }
 
 .hide {
-  color: rgb(255, 255, 255);
+ background-color: aliceblue;
 }
 
 .randomButtons {
@@ -187,4 +197,92 @@ footer {
     color: rgb(92, 72, 139);
     padding: 0 20px;
 }
+
+
+/* .................................  */
+
+
+
+.neck {
+    display: flex;
+    background-color: rgb(159, 72, 72);
+    overflow: auto;
+   
+}
+
+.nut {
+    background-color: rgb(255, 255, 255);
+    min-width: 5px;
+    height: 83%;
+ 
+}
+
+.board {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 40px;
+   
+}
+    
+.fret { 
+    min-width: 4px;
+    background-color: rgb(127, 127, 130);
+    height: 83%;
+
+}
+
+.notesOnNeck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border: 1px solid white;
+    margin: 3px;
+   
+}
+
+.fretPosition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border: 1px solid white;
+    margin: 3px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+
+}
+
+#octiveFret {
+    background-color: aqua;
+    width: 5px;
+}
+
+.fretboardHolder {
+    display: flex;
+    background-color: rgb(183, 183, 187);
+    padding: 30px;
+
+}
+
+.fretboardHolder h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gap {
+    background-color: rgb(183, 183, 187);
+    height: 10px;
+ 
+}
+
 
