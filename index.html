@@ -14,11 +14,12 @@
     </header>
 
 <section>
-<section class="fretboardHolder">
-    <button>X</button>
-<h2>
-    Dynamic Fretboard
-</h2>
+<section id="fretboard" class="fretboardHolder">
+ <div class="h2AndXHolder"> 
+    <h2> Dynamic Fretboard </h2>
+    <button id="closeButton" onclick="closeONE()">X</button>
+ </div>  
+
         <div class="neck">
             
             <div class="board open">
@@ -55,7 +56,7 @@
             </div>
             <div class="fret"></div>
             <div class="board">
-                <div class="notesOnNeck D">G</div>
+                <div class="notesOnNeck G">G</div>
                 <div class="notesOnNeck D">D</div>
                 <div class="notesOnNeck AS">A#</div>
                 <div class="notesOnNeck F">F</div>
@@ -161,9 +162,9 @@
                 <div class="notesOnNeck A">A</div>
                 <div class="notesOnNeck E">E</div>
        
-                <div class="fretPosition">12</div>
+                <div id="octiveNote"  class="fretPosition">12</div>
             </div>
-            <div id="octiveFret" class="fret"></div>
+            <div id="octiveNote" class="fret"></div>
             <div class="board">
                 <div class="notesOnNeck F">F</div>
                 <div class="notesOnNeck C">C</div>
@@ -223,7 +224,7 @@
                 <div class="notesOnNeck AS">A#</div>
                 <div class="notesOnNeck F">F</div>
                 <div class="notesOnNeck CS">C#</div>
-                <div class="notesOnNeck G">G#</div>
+                <div class="notesOnNeck GS">G#</div>
                 <div class="notesOnNeck DS">D#</div>
                 <div class="notesOnNeck AS">A#</div>
              
@@ -288,8 +289,8 @@
     </div>
     <div class="input">
     <input id="chosenKey" type="text">
-    <button onclick="refreshPage()">clear</button>
     </div>
+    <button id="clearAndReturn" onclick="refreshPage()">clear</button>
     <div id="answer" class="hide">
         <div><p id="i">R</p> <div id="root"></div></div>
         <div><p id="ii">i</p> <div id="third"></div></div>
@@ -308,6 +309,8 @@
     <div class="scaleChoices">
         <button onclick="ShowNotesInMinorKey()" >Minor scale</button>
         <button onclick="ShowNotesInMajorKey()" >Major scale</button>
+        <button onclick="ShowChord()" >Major Chord Voicings</button>
+        <button onclick="ShowChordMinor()" >Minor Chord Voicings</button>
         <button onclick="ShowNotesInPentatonicMinor()">Minor Pentatonic Scale</button>
         <button onclick="ShowNotesInPentatonic()">Pentatonic Scale</button>
         <button onclick="ShowNotesInBlues()" >Blues Scale</button>
@@ -332,12 +335,12 @@
 
 <div class="random">  
     <h2 ><i class="fa-solid fa-shuffle"></i>Random Chord Generator</h2>
-    <div id="myBox">A</div>
+    <div class="hide" id="myBox">A</div>
 <div class="randomButtons"> 
-    <button onclick="speedOfDisplay(-100)">Slower</button>
-    <button onclick="showRandom(), updateText()">Start </button>
-    <button onclick="hideRandom()">Stop</button>
-    <button onclick="speedOfDisplay(100)">Faster</button>
+    <button  id="blue" onclick="">Slow</button>
+    <button id="green" onclick="showRandom(), updateText()">Start </button>
+    <button id="red" onclick="hideRandom()">Stop</button>
+    <button  id="yellow" onclick="">Fast</button>
 </div>
 
 </div>

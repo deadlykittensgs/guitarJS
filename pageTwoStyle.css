@@ -1,0 +1,41 @@
+* {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    
+}
+
+body {
+    height: 100vh;
+   
+}
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #ddd;
+}
+
+
+.break {
+    background-color: #ddd;
+  
+}
+
+/* .sticky {
+    position: sticky;
+    top: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
