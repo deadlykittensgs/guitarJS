@@ -1,3 +1,6 @@
+live deploy https://remarkable-druid-92d73e.netlify.app/
+
+
 goal
 
 facebook  music group users constantly post pictures of new players with their finger position on the neck asking what chord they are playing. this app will be to help them be able to look up chords easily.
