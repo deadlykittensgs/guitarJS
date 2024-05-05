@@ -326,7 +326,7 @@ function highlightNotes(n1,n2,n3,n4,n5,n6,n7,) {
  let new7 = n7.replaceAll("#","S")
  let highlightSeven = document.querySelectorAll(`.${new7}`)
  highlightSeven.forEach(highlightSeven =>{
- highlightSeven.classList.add("glowlight"); 
+ highlightSeven.classList.add("glowligh"); 
  })
  } catch (error) {
     console.log("there was an error loading all notes on the fretboard")
@@ -461,7 +461,7 @@ function clearBoard () {
    let removeHighlightPink = document.querySelectorAll(".glowpink")
    let removeHighlightPurple = document.querySelectorAll(".glowpurple")
    let removeHighlightOrange = document.querySelectorAll(".gloworange")
-   let removeHighlightLight = document.querySelectorAll(".glowglight")
+   let removeHighlightLight = document.querySelectorAll(".glowligh")
    
    removeHighlight.forEach(removeHighlight => {
       removeHighlight.classList.remove("glow")
@@ -482,7 +482,7 @@ function clearBoard () {
       removeHighlightOrange.classList.remove("gloworange")
    })
    removeHighlightLight.forEach(removeHighlightLight => {
-      removeHighlightLight.classList.remove("glowlight")
+      removeHighlightLight.classList.remove("glowligh")
    })
 
 }
