@@ -281,6 +281,7 @@ function highlightNotes(n1,n2,n3,n4,n5,n6,n7,) {
 
    // try catch for the scales without 7 notes
     try {
+      clearBoard ()
     let removeHighlight = document.querySelectorAll(".glow")
  removeHighlight.forEach(removeHighlight => {
     removeHighlight.classList.remove("glow")
@@ -295,37 +296,37 @@ function highlightNotes(n1,n2,n3,n4,n5,n6,n7,) {
  let new2 = n2.replaceAll("#","S")
  let highlightTwo = document.querySelectorAll(`.${new2}`)
  highlightTwo.forEach(highlightTwo =>{
- highlightTwo.classList.add("glow"); 
+ highlightTwo.classList.add("glowpink"); 
  })
  
  let new3 = n3.replaceAll("#","S")
  let highlightThree = document.querySelectorAll(`.${new3}`)
  highlightThree.forEach(highlightThree =>{
- highlightThree.classList.add("glow"); 
+ highlightThree.classList.add("glowred"); 
  })
  
  let new4 = n4.replaceAll("#","S")
  let highlightFour = document.querySelectorAll(`.${new4}`)
  highlightFour.forEach(highlightFour =>{
- highlightFour.classList.add("glow"); 
+ highlightFour.classList.add("glowpurple"); 
  })
  
  let new5 = n5.replaceAll("#","S")
  let highlightFive= document.querySelectorAll(`.${new5}`)
  highlightFive.forEach(highlightFive =>{
- highlightFive.classList.add("glow"); 
+ highlightFive.classList.add("glowgreen"); 
  })
  
  let new6 = n6.replaceAll("#","S")
  let highlightSix = document.querySelectorAll(`.${new6}`)
  highlightSix.forEach(highlightSix =>{
- highlightSix.classList.add("glow"); 
+ highlightSix.classList.add("gloworange"); 
  })
  
  let new7 = n7.replaceAll("#","S")
  let highlightSeven = document.querySelectorAll(`.${new7}`)
  highlightSeven.forEach(highlightSeven =>{
- highlightSeven.classList.add("glow"); 
+ highlightSeven.classList.add("glowlight"); 
  })
  } catch (error) {
     console.log("there was an error loading all notes on the fretboard")
@@ -457,15 +458,33 @@ function clearBoard () {
    let removeHighlight = document.querySelectorAll(".glow")
    let removeHighlightRed = document.querySelectorAll(".glowred")
    let removeHighlightGreen = document.querySelectorAll(".glowgreen")
+   let removeHighlightPink = document.querySelectorAll(".glowpink")
+   let removeHighlightPurple = document.querySelectorAll(".glowpurple")
+   let removeHighlightOrange = document.querySelectorAll(".gloworange")
+   let removeHighlightLight = document.querySelectorAll(".glowglight")
+   
    removeHighlight.forEach(removeHighlight => {
       removeHighlight.classList.remove("glow")
    })
-   removeHighlightRed.forEach(removeHighlight => {
-      removeHighlight.classList.remove("glowred")
+   removeHighlightRed.forEach(removeHighlightRed => {
+      removeHighlightRed.classList.remove("glowred")
    })
-   removeHighlightGreen.forEach(removeHighlight => {
-      removeHighlight.classList.remove("glowgreen")
+   removeHighlightGreen.forEach(removeHighlightGreen => {
+      removeHighlightGreen.classList.remove("glowgreen")
    })
+   removeHighlightPink.forEach(removeHighlightPink => {
+      removeHighlightPink.classList.remove("glowpink")
+   })
+   removeHighlightPurple.forEach(removeHighlightPurple => {
+      removeHighlightPurple.classList.remove("glowpurple")
+   })
+   removeHighlightOrange.forEach(removeHighlightOrange => {
+      removeHighlightOrange.classList.remove("gloworange")
+   })
+   removeHighlightLight.forEach(removeHighlightLight => {
+      removeHighlightLight.classList.remove("glowlight")
+   })
+
 }
 
 
