@@ -148,7 +148,7 @@ function ShowNotesInMinorKey(index) {
    index = getKey()
    showHide()
    highlightNotes(index[0],)
-   highlightNotesRed( index[2])
+   highlightNotesRed( index[3])
    highlightNotesGreen(index[7])
 
    one.innerText = index[0]
