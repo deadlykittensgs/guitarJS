@@ -22,6 +22,13 @@ let nameSix = document.getElementById("vi")
 let nameSeven = document.getElementById("vii")
 let clearAndReturn = document.getElementById("clearAndReturn")
 
+
+let ProgressionsMoodOne = document.getElementById("ProgressionsMoodOne")
+let ProgressionsMoodTwo = document.getElementById("ProgressionsMoodTwo")
+let ProgressionsMoodThree = document.getElementById("ProgressionsMoodThree")
+let ProgressionsMoodFour = document.getElementById("ProgressionsMoodFour")
+
+
 let ProgressionsP1 = document.getElementById("ProgressionsP1")
 let ProgressionsP2 = document.getElementById("ProgressionsP2")
 let ProgressionsP3= document.getElementById("ProgressionsP3")
@@ -57,6 +64,8 @@ return(index)
 }
 }
 
+
+
 // take the key and make a list of all the notes in order
 function getScale(scaleSet) {
    let keyLocation = scaleSet
@@ -65,10 +74,17 @@ return  orderedArray
 }
 
 function ShowNotesInMajorKey() {
-   clearBoard ()
-    index = getKey()
+   //get notes
+   index = getKey()
+   //dynamically suggest progressions
+   chordProgressionsInKey(index)
+   ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
+   ProgressionsMoodTwo.innerText = "R-6-4-5: This progression is also quite common!"
+   ProgressionsMoodThree.innerText = "2-5-R: This progression is known as a turnar!"
+   ProgressionsMoodFour.innerText = "R-6-2-5: Common progression in jazz and pop music!"
     showHide()
     highlightNotes(index[0],index[2], index[4],index[5],index[7],index[9],index[11])
+    dynamicProgressions(index)
    one.innerText = index[0]
    two.innerText = index[2]
    three.innerText = index[4]
@@ -87,10 +103,11 @@ function ShowNotesInMajorKey() {
    
    return index[0,2,4,5,7,9,11]
 } 
+clearBoard ()
 
 
 function ShowNotesInMinorKey(index) {
-   clearBoard ()
+  
     index = getKey()
     showHide()
     highlightNotes(index[0],index[2],index[3],index[5],index[7],index[8],index[10])
@@ -119,10 +136,7 @@ function ShowNotesInMinorKey(index) {
    clearBoard ()
    index = getKey()
    showHide()
-   highlightNotes(index[0],)
-   highlightNotesRed( index[4])
-   highlightNotesGreen(index[7])
-
+   highlightNotes(index[0],index[4],index[7])
    one.innerText = index[0]
    two.innerText = index[4]
    three.innerText = index[7]
@@ -147,9 +161,7 @@ function ShowNotesInMinorKey(index) {
    clearBoard ()
    index = getKey()
    showHide()
-   highlightNotes(index[0],)
-   highlightNotesRed( index[3])
-   highlightNotesGreen(index[7])
+   highlightNotes(index[0],index[3],index[7])
 
    one.innerText = index[0]
    two.innerText = index[3]
@@ -334,48 +346,7 @@ function highlightNotes(n1,n2,n3,n4,n5,n6,n7,) {
  }
  }
 
- function highlightNotesRed(note) {
-
-   // try catch for the scales without 7 notes
-    try {
-    let removeHighlight = document.querySelectorAll(".glowred")
- removeHighlight.forEach(removeHighlight => {
-    removeHighlight.classList.remove("glowred")
- })
- 
-   let new1 = note.replaceAll("#","S")
-    let highlight = document.querySelectorAll(`.${new1}`)
-    highlight.forEach(highlight =>{
-    highlight.classList.add("glowred"); 
-  })
- 
- } catch (error) {
-    console.log("there was an error loading all notes on the fretboard")
-       
- }
- }
-
- function highlightNotesGreen(note) {
-
-   // try catch for the scales without 7 notes
-    try {
-    let removeHighlight = document.querySelectorAll(".glowgreen")
- removeHighlight.forEach(removeHighlight => {
-    removeHighlight.classList.remove("glowgreen")
- })
- 
-   let new1 = note.replaceAll("#","S")
-    let highlight = document.querySelectorAll(`.${new1}`)
-    highlight.forEach(highlight =>{
-    highlight.classList.add("glowgreen"); 
-  })
- 
- } catch (error) {
-    console.log("there was an error loading all notes on the fretboard")
-       
- }
- }
- 
+//reload  
  function refreshPage() {
     location.reload()
 
@@ -488,23 +459,27 @@ function clearBoard () {
 }
 
 
-
-// function chordProgressionsInKeyMinor(notesForChords) {
-//    let orderedArrayOfNotes = notesForChords
-//    let value0 = orderedArrayOfNotes[0]
-//    let value1 = orderedArrayOfNotes[1]
-//    let value2 = orderedArrayOfNotes[2]
-//    let value3 = orderedArrayOfNotes[3]
-//    let value4 = orderedArrayOfNotes[4]
-//    let value5 = orderedArrayOfNotes[5]
-//    let value6 = orderedArrayOfNotes[6]
-//    let value7 = orderedArrayOfNotes[7]
-//    let value8 = orderedArrayOfNotes[8]
-//    let value9 = orderedArrayOfNotes[9]
-//    let value10 = orderedArrayOfNotes[10]
-//    let value11 = orderedArrayOfNotes[11]
-//    ProgressionsP1.innerText = `${value0}-${value5}-${value7}-${value0}`
-//    ProgressionsP2.innerText =  `${value0}-${value9}-${value5}-${value7}`
-//    ProgressionsP3.innerText = `${value2}-${value7}-${value0}`
-//    ProgressionsP4.innerText = `${value0}-${value9}-${value2}-${value7}`
+// function dynamicProgressions() {
+//    ProgressionsP1.className.remove ="hide"
+//    ProgressionsP1.innerText ="smol"
 // }
+
+function chordProgressionsInKeyMinor(notesForChords) {
+   let orderedArrayOfNotes = notesForChords
+   let value0 = orderedArrayOfNotes[0]
+   let value1 = orderedArrayOfNotes[1]
+   let value2 = orderedArrayOfNotes[2]
+   let value3 = orderedArrayOfNotes[3]
+   let value4 = orderedArrayOfNotes[4]
+   let value5 = orderedArrayOfNotes[5]
+   let value6 = orderedArrayOfNotes[6]
+   let value7 = orderedArrayOfNotes[7]
+   let value8 = orderedArrayOfNotes[8]
+   let value9 = orderedArrayOfNotes[9]
+   let value10 = orderedArrayOfNotes[10]
+   let value11 = orderedArrayOfNotes[11]
+   ProgressionsP1.innerText = `${value0}-${value5}-${value7}-${value0}`
+   ProgressionsP2.innerText =  `${value0}-${value9}-${value5}-${value7}`
+   ProgressionsP3.innerText = `${value2}-${value7}-${value0}`
+   ProgressionsP4.innerText = `${value0}-${value9}-${value2}-${value7}`
+}
