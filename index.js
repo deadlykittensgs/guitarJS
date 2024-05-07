@@ -23,10 +23,12 @@ let nameSeven = document.getElementById("vii")
 let clearAndReturn = document.getElementById("clearAndReturn")
 
 
+
 let ProgressionsMoodOne = document.getElementById("ProgressionsMoodOne")
 let ProgressionsMoodTwo = document.getElementById("ProgressionsMoodTwo")
 let ProgressionsMoodThree = document.getElementById("ProgressionsMoodThree")
 let ProgressionsMoodFour = document.getElementById("ProgressionsMoodFour")
+
 
 
 let ProgressionsP1 = document.getElementById("ProgressionsP1")
@@ -84,7 +86,6 @@ function ShowNotesInMajorKey() {
    ProgressionsMoodFour.innerText = "R-6-2-5: Common progression in jazz and pop music!"
     showHide()
     highlightNotes(index[0],index[2], index[4],index[5],index[7],index[9],index[11])
-    dynamicProgressions(index)
    one.innerText = index[0]
    two.innerText = index[2]
    three.innerText = index[4]
@@ -107,8 +108,13 @@ clearBoard ()
 
 
 function ShowNotesInMinorKey(index) {
+   index = getKey()
+   chordProgressionsInKeyMinor(index)
+   ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
+   ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
+   ProgressionsMoodThree.innerText = "R-7-6-5: Often used in pop and rock music, this progression has a descending bass line"
+   ProgressionsMoodFour.innerText = "R-3-7-6:Used in many pop songs, this progression is known for its uplifting feel despite being in a minor key."
   
-    index = getKey()
     showHide()
     highlightNotes(index[0],index[2],index[3],index[5],index[7],index[8],index[10])
 
@@ -133,8 +139,13 @@ function ShowNotesInMinorKey(index) {
  } 
 
  function ShowChord() {
-   clearBoard ()
    index = getKey()
+   chordProgressionsInKey(index)
+   ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
+   ProgressionsMoodTwo.innerText = "R-6-4-5: This progression is also quite common!"
+   ProgressionsMoodThree.innerText = "2-5-R: This progression is known as a turnar!"
+   ProgressionsMoodFour.innerText = "R-6-2-5: Common progression in jazz and pop music!"
+   clearBoard ()
    showHide()
    highlightNotes(index[0],index[4],index[7])
    one.innerText = index[0]
@@ -158,8 +169,13 @@ function ShowNotesInMinorKey(index) {
  }
 
  function ShowChordMinor() {
-   clearBoard ()
    index = getKey()
+   chordProgressionsInKeyMinor(index)
+   ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
+   ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
+   ProgressionsMoodThree.innerText = "R-7-6-5: Often used in pop and rock music, this progression has a descending bass line"
+   ProgressionsMoodFour.innerText = "R-3-7-6:Used in many pop songs, this progression is known for its uplifting feel despite being in a minor key."
+   clearBoard ()
    showHide()
    highlightNotes(index[0],index[3],index[7])
 
@@ -184,8 +200,13 @@ function ShowNotesInMinorKey(index) {
  }
 
  function ShowNotesInPentatonic() {
+   index = getKey()
+   chordProgressionsInKey(index)
+   ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
+   ProgressionsMoodTwo.innerText = "R-6-4-5: This progression is also quite common!"
+   ProgressionsMoodThree.innerText = "2-5-R: This progression is known as a turnar!"
+   ProgressionsMoodFour.innerText = "R-6-2-5: Common progression in jazz and pop music!"
    clearBoard ()
-    index = getKey()
     showHide()
     highlightNotes(index[0],index[2],index[4],index[7],index[9])
     one.innerText = index[0]
@@ -209,8 +230,13 @@ function ShowNotesInMinorKey(index) {
  }
 
  function ShowNotesInPentatonicMinor() {
+   index = getKey()
+   chordProgressionsInKeyMinor(index)
+   ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
+   ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
+   ProgressionsMoodThree.innerText = "R-7-6-5: Often used in pop and rock music, this progression has a descending bass line"
+   ProgressionsMoodFour.innerText = "R-3-7-6:Used in many pop songs, this progression is known for its uplifting feel despite being in a minor key."
    clearBoard ()
-    index = getKey()
     showHide()
     highlightNotes(index[0],index[3],index[5],index[7],index[10])
 
@@ -236,8 +262,13 @@ function ShowNotesInMinorKey(index) {
 
 
  function ShowNotesInBlues() {
+   index = getKey()
+   chordProgressionsInKey(index)
+   ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
+   ProgressionsMoodTwo.innerText = "R-6-4-5: This progression is also quite common!"
+   ProgressionsMoodThree.innerText = "2-5-R: This progression is known as a turnar!"
+   ProgressionsMoodFour.innerText = "R-6-2-5: Common progression in jazz and pop music!"
    clearBoard ()
-    index = getKey()
     showHide()
     highlightNotes(index[0],index[2],index[3],index[4],index[7],index[9])
 
@@ -263,8 +294,14 @@ function ShowNotesInMinorKey(index) {
 
 
  function ShowNotesInBluesMinor() {
+
+   index = getKey()
+   chordProgressionsInKeyMinor(index)
+   ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
+   ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
+   ProgressionsMoodThree.innerText = "R-7-6-5: Often used in pop and rock music, this progression has a descending bass line"
+   ProgressionsMoodFour.innerText = "R-3-7-6:Used in many pop songs, this progression is known for its uplifting feel despite being in a minor key."
    clearBoard ()
-    index = getKey()
     showHide()
     highlightNotes(index[0],index[3],index[5],index[6],index[7],index[10])
 
@@ -397,20 +434,25 @@ function updateText() {
   
 }
 
-// Update the text every second
-setInterval(updateText, 1000);
 
-// function speedOfDisplay(number) {
-//    speed =  speed  +  number
-//    return  
-// }
+let speed = 1000
 
+function newSpeed(num) {
+   speed = speed + num 
+   console.log(speed)
+   clearInterval(updateText)
+   setInterval(updateText, `${speed}`)
+}
 
 
 // hide the random note Generator
 function hideRandom() {
    myBox.className = "hide"
 }
+
+
+
+
 
 
 //hide the dynamic chord progressions until they are named
@@ -422,6 +464,8 @@ function showHide() {
 // show the random note Generator
 function showRandom()  {
    myBox.className = "none"
+   newSpeed(3)
+
    
 }
 
@@ -465,8 +509,10 @@ function clearBoard () {
 // }
 
 function chordProgressionsInKeyMinor(notesForChords) {
-   let orderedArrayOfNotes = notesForChords
-   let value0 = orderedArrayOfNotes[0]
+  
+   try {
+      let orderedArrayOfNotes = notesForChords
+      let value0 = orderedArrayOfNotes[0]
    let value1 = orderedArrayOfNotes[1]
    let value2 = orderedArrayOfNotes[2]
    let value3 = orderedArrayOfNotes[3]
@@ -478,8 +524,14 @@ function chordProgressionsInKeyMinor(notesForChords) {
    let value9 = orderedArrayOfNotes[9]
    let value10 = orderedArrayOfNotes[10]
    let value11 = orderedArrayOfNotes[11]
-   ProgressionsP1.innerText = `${value0}-${value5}-${value7}-${value0}`
-   ProgressionsP2.innerText =  `${value0}-${value9}-${value5}-${value7}`
-   ProgressionsP3.innerText = `${value2}-${value7}-${value0}`
-   ProgressionsP4.innerText = `${value0}-${value9}-${value2}-${value7}`
+   ProgressionsP1.innerText = `${value0}-${value5}-${value7}`
+   ProgressionsP2.innerText =  `${value0}-${value8}-${value3}-${value10}`
+   ProgressionsP3.innerText = `${value0}-${value10}-${value8}-${value7}`
+   ProgressionsP4.innerText = `${value0}-${value3}-${value10}-${value8}`
+}
+  
+    catch (error) {
+      console.log("chord progression Error")
+      
+   }
 }
