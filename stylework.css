@@ -185,13 +185,15 @@ header i {
 }
 
 .glowgreen {
-    background-color: rgb(60, 187, 89);
+    /* is pink  */
+    background-color: rgb(255, 83, 246);
     color: rgb(255, 255, 255);
 }
 
 
 .glowpink{
-    background-color: rgb(255, 0, 242);
+    /* is green  */
+    background-color: rgb(60, 187, 89);
     color: rgb(255, 255, 255);
 }
 
@@ -201,7 +203,7 @@ header i {
 }
 
 .glowpurple {
-    background-color: rgb(183, 35, 213);
+    background-color: rgb(181, 7, 216);
     color: rgb(255, 255, 255);
 }
 
