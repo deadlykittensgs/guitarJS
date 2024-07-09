@@ -2,7 +2,6 @@
 const musicNotes = ["A", "A#", "B","C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
 
 // get from doc 
-
 let neckDynamic = document.getElementById("neckDynamic")
 let answerHide = document.getElementById("answer")
 let chosenKey = document.getElementById("chosenKey")
@@ -21,37 +20,35 @@ let nameFive = document.getElementById("v")
 let nameSix = document.getElementById("vi")
 let nameSeven = document.getElementById("vii")
 let clearAndReturn = document.getElementById("clearAndReturn")
-
-
-
+// moods
 let ProgressionsMoodOne = document.getElementById("ProgressionsMoodOne")
 let ProgressionsMoodTwo = document.getElementById("ProgressionsMoodTwo")
 let ProgressionsMoodThree = document.getElementById("ProgressionsMoodThree")
 let ProgressionsMoodFour = document.getElementById("ProgressionsMoodFour")
-
-
-
+// progressions
 let ProgressionsP1 = document.getElementById("ProgressionsP1")
 let ProgressionsP2 = document.getElementById("ProgressionsP2")
 let ProgressionsP3= document.getElementById("ProgressionsP3")
 let ProgressionsP4 = document.getElementById("ProgressionsP4")
-
 
 // onclick 
 let key =  ""
 let notes = []
 
 
+//error
+let error = false
+
 // functions 
 function getKey() {
+   error = false
     inputValue = chosenKey.value;
     let key = chosenKey.value.toUpperCase()
-    let number = findIndexOfChord(key)
-    let correctedNoteOrder = getScale(number)
-
-    // chosenKey.value = ""   if you want to reset value on load
-   
-    return correctedNoteOrder
+ 
+      let number = findIndexOfChord(key)
+      let correctedNoteOrder = getScale(number)
+      // chosenKey.value = ""   if you want to reset value on load
+      return correctedNoteOrder
 }
 
 // find the index of the key given
@@ -59,10 +56,13 @@ function findIndexOfChord(inputValue) {
     let findKey = inputValue;
     let index = musicNotes.indexOf(findKey);
     index = musicNotes.indexOf(findKey);
-if (index !== -1) {
-return(index)
+      if (index !== -1) {
+         return(index)
 } else {
+
     console.log(findKey, "key Not Found");
+    error = true
+    return 
 }
 }
 
@@ -76,8 +76,11 @@ return  orderedArray
 }
 
 function ShowNotesInMajorKey() {
+
    //get notes
    index = getKey()
+
+   if(error == true) {return}
    //dynamically suggest progressions
    chordProgressionsInKey(index)
    ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
@@ -109,6 +112,7 @@ clearBoard ()
 
 function ShowNotesInMinorKey(index) {
    index = getKey()
+   if(error == true) {return}
    chordProgressionsInKeyMinor(index)
    ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
    ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
@@ -140,6 +144,7 @@ function ShowNotesInMinorKey(index) {
 
  function ShowChord() {
    index = getKey()
+   if(error == true) {return}
    chordProgressionsInKey(index)
    ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
    ProgressionsMoodTwo.innerText = "R-6-4-5: This progression is also quite common!"
@@ -170,6 +175,7 @@ function ShowNotesInMinorKey(index) {
 
  function ShowChordMinor() {
    index = getKey()
+   if(error == true) {return}
    chordProgressionsInKeyMinor(index)
    ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
    ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
@@ -201,6 +207,7 @@ function ShowNotesInMinorKey(index) {
 
  function ShowNotesInPentatonic() {
    index = getKey()
+   if(error == true) {return}
    chordProgressionsInKey(index)
    ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
    ProgressionsMoodTwo.innerText = "R-6-4-5: This progression is also quite common!"
@@ -231,6 +238,7 @@ function ShowNotesInMinorKey(index) {
 
  function ShowNotesInPentatonicMinor() {
    index = getKey()
+   if(error == true) {return}
    chordProgressionsInKeyMinor(index)
    ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
    ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
@@ -263,6 +271,7 @@ function ShowNotesInMinorKey(index) {
 
  function ShowNotesInBlues() {
    index = getKey()
+   if(error == true) {return}
    chordProgressionsInKey(index)
    ProgressionsMoodOne.innerText = "R-4-5-R: This progression is a classic and often!"
    ProgressionsMoodTwo.innerText = "R-6-4-5: This progression is also quite common!"
@@ -296,6 +305,7 @@ function ShowNotesInMinorKey(index) {
  function ShowNotesInBluesMinor() {
 
    index = getKey()
+   if(error == true) {return}
    chordProgressionsInKeyMinor(index)
    ProgressionsMoodOne.innerText = "R-4-5: This progression is often used in minor blues and rock music."
    ProgressionsMoodTwo.innerText = "R-6-3-7: Known as the natural minor or Aeolian progression, it's common in pop and rock ballads."
@@ -430,25 +440,13 @@ const myBox = document.getElementById('myBox');
 // Function to update the text inside the box
 function updateText() {
    let randomIndex = Math.floor(Math.random() * 11) 
-    myBox.textContent =  musicNotes[randomIndex];
+    myBox.textContent = musicNotes[randomIndex];
   
 }
 
 
-let speed = 1000
-
-function newSpeed(num) {
-   speed = speed + num 
-   console.log(speed)
-   clearInterval(updateText)
-   setInterval(updateText, `${speed}`)
-}
 
 
-// hide the random note Generator
-function hideRandom() {
-   myBox.className = "hide"
-}
 
 
 
@@ -461,13 +459,18 @@ function showHide() {
 }
 
 
+// to hide and show random note genarator if a stop button is added
+
 // show the random note Generator
 function showRandom()  {
    myBox.className = "none"
-   newSpeed(3)
-
-   
 }
+
+
+// hide the random note Generator
+// function hideRandom() {
+//    myBox.className = "hide"
+// }
 
 function clearBoard () {
    let removeHighlight = document.querySelectorAll(".glow")
@@ -503,10 +506,6 @@ function clearBoard () {
 }
 
 
-// function dynamicProgressions() {
-//    ProgressionsP1.className.remove ="hide"
-//    ProgressionsP1.innerText ="smol"
-// }
 
 function chordProgressionsInKeyMinor(notesForChords) {
   

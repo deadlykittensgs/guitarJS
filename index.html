@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="stylework.css">
     <meta charset="UTF-8">
@@ -13,6 +14,8 @@
             <h1>What Chord is This?</h1>
             <i class="fa-solid fa-guitar"></i>
         </div>
+
+        <!-- uncomment to add pages option to the top of the page -->
         <!-- <div class="headerLinks">
             <a target="_blank" href="https://jocular-sunburst-578dda.netlify.app">Note Chart</a>
             <a target="_blank" href="https://clinquant-toffee-6e2fb4.netlify.app"> Home</a>
@@ -295,7 +298,7 @@
     <p>Desired Key OR Chord</p>
     </div>
     <div class="input">
-    <input id="chosenKey" type="text">
+    <input id="chosenKey" type="text" placeholder="Enter a key">
     </div>
     <button id="clearAndReturn" onclick="refreshPage()">clear</button>
     <div id="answer" class="hide">
@@ -346,8 +349,8 @@
     <div class="hide" id="myBox">A</div>
 <div class="randomButtons"> 
     <!-- <button  id="blue" onclick="newSpeed(1000)">Slow</button> -->
-    <button id="green" onclick="showRandom(), updateText()">Start </button>
-    <button id="red" onclick="hideRandom()">Stop</button>
+    <button id="green" onclick="showRandom(), updateText()">Random Key </button>
+    <!-- <button id="red" onclick="hideRandom()">Stop</button> -->
     <!-- <button  id="yellow" onclick="newSpeed(-1000)">Fast</button> -->
 </div>
 
