@@ -433,3 +433,7 @@ footer {
 #closeButton {
     z-index: 10;
 }
+
+.bugLink {
+    text-decoration: none;
+}
