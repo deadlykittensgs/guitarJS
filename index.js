@@ -156,10 +156,10 @@ function ShowNotesInMinorKey(index) {
    one.innerText = index[0]
    two.innerText = index[4]
    three.innerText = index[7]
-   four.innerText = ""
-   five.innerText = ""
-   six.innerText = ""
-   seven.innerText = ""
+   four.innerText = "-"
+   five.innerText = "-"
+   six.innerText = "-"
+   seven.innerText = "-"
 
    nameOne.innerText ="R"
    nameTwo.innerText ="3"
@@ -188,10 +188,10 @@ function ShowNotesInMinorKey(index) {
    one.innerText = index[0]
    two.innerText = index[3]
    three.innerText = index[7]
-   four.innerText = ""
-   five.innerText = ""
-   six.innerText = ""
-   seven.innerText = ""
+   four.innerText = "-"
+   five.innerText = "-"
+   six.innerText = "-"
+   seven.innerText = "-"
 
    nameOne.innerText ="R"
    nameTwo.innerText ="b3"
